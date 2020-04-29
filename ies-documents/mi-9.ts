@@ -1,0 +1,24 @@
+export default {
+  name: "mi_9",
+  data: `
+IESNA91
+[TEST]刘少辉
+[MANUFAC]刘少辉
+[LUMCAT]CC13 100M PR
+[LUMINAIRE]13" OPEN DOWNLIGHT WITH A SPECULAR ALZAK REFLECTOR W/GLASS
+[LAMPCAT]M100/C/U                               
+[LAMP]ONE 100-WATT BT-17 METAL HALIDE, VERTICAL BASE-UP POSITION.
+TILT=NONE        
+ 1  8000  1  37  1  1  1 -1  0  0 
+ 1  1  125 
+ 0  2.5  5  7.5  10  12.5  15  17.5  20  22.5 
+ 25  27.5  30  32.5  35  37.5  40  42.5  45  47.5 
+ 50  52.5  55  57.5  60  62.5  65  67.5  70  72.5 
+ 75  77.5  80  82.5  85  87.5  90 
+ 0 
+ 5088  5090  5135  5054  4970  4740  4299  4037  3596  3239 
+ 3036  2888  2602  2057  1447  1004  704  437  213  90 
+ 1  0  0  0  0  0  0  0  0  0 
+ 0  0  0  0  0  0  0
+`,
+};

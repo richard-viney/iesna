@@ -1,0 +1,12 @@
+{
+  "extends": "../tsconfig.json",
+
+  "files": ["./index.ts"],
+
+  "compilerOptions": {
+    "outFile": "index.js",
+    "isolatedModules": false,
+    "lib": ["dom"],
+    "module": "AMD",
+  }
+}

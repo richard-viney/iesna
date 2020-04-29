@@ -1,0 +1,32 @@
+{
+  "editor.rulers": [100],
+  "editor.tabSize": 2,
+
+  "editor.codeActionsOnSave": {
+    "source.organizeImports": true
+  },
+
+  "files.exclude": {
+    "coverage": true,
+    "demo/index.js": true,
+    "dist": true,
+    "node_modules": true
+  },
+
+  "eslint.validate": ["javascript", "typescript"],
+
+  "[javascript]": {
+    "editor.formatOnSave": true
+  },
+  "[json]": {
+    "editor.formatOnSave": true
+  },
+  "[typescript]": {
+    "editor.formatOnSave": true
+  },
+  "[css]": {
+    "editor.formatOnSave": true
+  },
+  "javascript.preferences.importModuleSpecifier": "non-relative",
+  "typescript.preferences.importModuleSpecifier": "non-relative"
+}
