@@ -1,0 +1,48 @@
+name: Release
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  release:
+    name: Release
+    runs-on: ubuntu-24.04
+    environment: Publish to NPM
+    timeout-minutes: 10
+
+    steps:
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Install packages
+        uses: bahmutov/npm-install@v1
+
+      - name: Wait for tests to complete
+        uses: lewagon/wait-on-check-action@v1.3.4
+        with:
+          ref: ${{ github.sha }}
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+          check-regexp: Test
+
+      - name: Build demo app
+        run: npx vite build
+
+      - name: Deploy demo app to GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: demo/dist
+
+      - name: Semantic release
+        uses: cycjimmy/semantic-release-action@v4
+        with:
+          dry_run: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}

@@ -1,0 +1,21 @@
+{
+  "include": ["src/index.ts"],
+
+  "compilerOptions": {
+    "outDir": "dist",
+
+    "target": "ES2022",
+    "module": "ES2022",
+    "moduleResolution": "node",
+
+    "declaration": true,
+
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "noEmitOnError": true,
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitReturns": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true
+  }
+}

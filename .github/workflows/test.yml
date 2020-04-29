@@ -1,0 +1,34 @@
+name: Test
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+jobs:
+  test:
+    name: Test
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+
+    steps:
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Install packages
+        uses: bahmutov/npm-install@v1
+
+      - name: Check code formatting
+        run: npm run format:check
+
+      - name: Run linters
+        run: npm run lint
+
+      - name: Run tests
+        run: npm run test

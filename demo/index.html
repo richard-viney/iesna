@@ -1,0 +1,64 @@
+<!doctype html>
+<html>
+  <head>
+    <script
+      src="https://kit.fontawesome.com/4e8968f74f.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <link href="./index.css" rel="stylesheet" />
+    <script type="module" src="./index.ts"></script>
+  </head>
+
+  <body>
+    <header>
+      <img src="./logo.svg" height="48px" />
+      <h1>IESNA Demo</h1>
+      <a
+        href="https://github.com/richard-viney/iesna"
+        target="_blank"
+        style="margin-left: auto"
+      >
+        <i class="fa-github fa-brands fa-2x"></i>
+      </a>
+    </header>
+
+    <div class="canvas-container">
+      <canvas></canvas>
+    </div>
+
+    <div class="controls">
+      <label>IES Document</label>
+      <select id="light"></select>
+      <label>Distance</label>
+      <input
+        id="distance"
+        type="range"
+        min="0.001"
+        max="100"
+        value="0"
+        step="0.001"
+      />
+      <label>Zoom</label>
+      <input
+        id="zoom"
+        type="range"
+        min="0.001"
+        max="5"
+        value="1.2"
+        step="0.001"
+      />
+      <label>Brightness</label>
+      <input
+        id="brightness"
+        type="range"
+        min="0.001"
+        max="5"
+        value="1.2"
+        step="0.001"
+      />
+    </div>
+
+    <textarea></textarea>
+  </body>
+</html>

@@ -1,0 +1,80 @@
+html {
+  --theme-bg-color-0: #24292e;
+  --theme-border-color-0: #3d4147;
+  --theme-text-color-default: #dddddd;
+  --theme-text-color-highlight: #ffffff;
+}
+
+body {
+  margin: 0;
+  overflow: hidden;
+  overscroll-behavior-x: none;
+
+  font-family: sans-serif;
+  font-size: 14px;
+
+  background-color: var(--theme-bg-color-0);
+  color: var(--theme-text-color-default);
+
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-areas:
+    "header   header"
+    "canvas   document"
+    "controls document";
+}
+
+header {
+  grid-area: header;
+  display: flex;
+  gap: 1em;
+  align-items: center;
+  padding: 0.5em 1em;
+  margin-bottom: 2em;
+
+  border-bottom: 2px solid var(--theme-border-color-0);
+
+  a {
+    color: inherit;
+    transition: color 100ms;
+
+    &:hover {
+      color: var(--theme-text-color-highlight);
+    }
+  }
+}
+
+.controls {
+  padding: 0 2em;
+
+  grid-area: controls;
+  display: grid;
+  grid-template-columns: max-content auto;
+  grid-template-columns: max-content auto;
+  gap: 1.5em 4em;
+  align-items: center;
+  grid-template-areas:
+    "label0 control0"
+    "label1 control1"
+    "label2 control2"
+    "label3 control3";
+}
+
+.canvas-container {
+  grid-area: canvas;
+  padding: 0 2em 2em 2em;
+}
+
+canvas {
+  width: 420px;
+  height: 420px;
+
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border-radius: 4px;
+}
+
+textarea {
+  grid-area: document;
+  margin: 0 2em 2em 2em;
+  resize: none;
+}

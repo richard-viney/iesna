@@ -1,0 +1,52 @@
+          IES_READ - Ledalite IES Photometric Data File Utility
+          -----------------------------------------------------
+
+Version:  1.00D
+Date:     98/03/09
+
+Copyright 1995-1998 byHeart Consultants Limited
+
+Permission:  The program IES_READ is copyrighted. However, it may be
+             be freely copied, redistributed, and modified for personal
+             use or for royalty-free inclusion in commercial programs.
+
+Description: IES_READ is an MS-DOS program that is designed to read
+             photometric data files that conform to IES LM-63, "IES
+             Standard File Format for Electronic Transfer of Photometric
+             Data and Related Information."
+
+Usage:       IES_READ data_file_name
+
+             The program output will be displayed on the computer screen.
+             To redirect this output to a file:
+
+             IES_READ data_file_name > output_file_name
+
+             The output file will contain ASCII text that can be edited
+             by any text editor or word processor.
+
+Example:     IES_READ 111621pn.3s
+
+             or
+
+             IES_READ 111621pn.3s > aardvark.txt
+
+Notes:       1. There are three different versions of IES photometric
+                data files, as defined by IES LM-63-1986, LM-63-1991,
+                and LM-63-1995. This program will successfully read an
+                IES photometric data file that conforms to any of these
+                standards.
+
+             2. If the photometric data file contains candela
+                measurements at vertical angle intervals of 5.0 degrees,
+                IES_READ will calculate the following information in
+                accordance with IES LM-57-1982, "IES Recommended
+                Procedure for Calculating Coefficients of Utilization,
+                Wall and Ceiling Cavity Exitance":
+
+                a) Luminaire efficiency
+                b) Zonal lumens summary
+                c) Coefficients of Utilization
+
+                The CIE distribution type will also be determined.
+
