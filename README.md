@@ -9,7 +9,7 @@ format.
 
 This project is heavily based on the original publication "Parsing The IESNA LM-63 Photometric Data
 File" and its accompanying source code that is available at
-[http://lumen.iee.put.poznan.pl/kw/iesna.txt](here). For reference purposes, a copy of the original
+http://lumen.iee.put.poznan.pl/kw/iesna.txt. For reference purposes, a copy of the original
 publication is included in this repository under `vendor/iesna-c/`.
 
 ## Usage
@@ -37,7 +37,7 @@ const intensity = IESNA.sample({ iesData, x, y, z });
 ## Demo
 
 There is a demo app that shows the rendering of IES documents in the browser. Run it with
-`npm install && npm run dev` then go to [http://localhost:5000](http://localhost:5000).
+`npm install && npm run dev` then go to `http://localhost:5000`.
 
 ## License
 
