@@ -158,9 +158,8 @@ function parseIesData(document: IesDocument): IesData {
   }
 
   // Unpack candela values
-  data.photometricData.candela = new Array(horizontalAngleCount);
   for (let i = 0; i < horizontalAngleCount; i++) {
-    data.photometricData.candela[i] = [];
+    data.photometricData.candela.push([]);
     for (let j = 0; j < verticalAngleCount; j++) {
       data.photometricData.candela[i].push(getNextValue());
     }

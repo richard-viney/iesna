@@ -19,7 +19,7 @@ export function renderToCanvas({
   convertSampleToRGB?: (sample: number) => [number, number, number];
 }): void {
   const context = canvas.getContext("2d");
-  if (!context) {
+  if (context === null) {
     throw Error("iesna: renderToCanvas() failed getting context for canvas");
   }
 

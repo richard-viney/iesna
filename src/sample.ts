@@ -29,7 +29,7 @@ export function sample({
   const inclination = radiansToDegrees(Math.acos(y / distance));
 
   // Find the horizontal index to use
-  let horizontalIndex: number | undefined;
+  let horizontalIndex: number | undefined = undefined;
   for (let i = 0; i < iesData.photometricData.horizontalAngles.length - 1; i++) {
     if (
       azimuth >= iesData.photometricData.horizontalAngles[i] &&
@@ -41,7 +41,7 @@ export function sample({
   }
 
   // Find the vertical index to use
-  let verticalIndex: number | undefined;
+  let verticalIndex: number | undefined = undefined;
   for (let i = 0; i < iesData.photometricData.verticalAngles.length - 1; i++) {
     if (
       inclination >= iesData.photometricData.verticalAngles[i] &&

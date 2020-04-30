@@ -30,12 +30,36 @@ module.exports = {
         project: "./tsconfig.json",
       },
 
-      extends: [
-        "plugin:@typescript-eslint/eslint-recommended",
-        "plugin:@typescript-eslint/recommended",
-        "plugin:@typescript-eslint/recommended-requiring-type-checking",
-        "prettier/@typescript-eslint",
-      ],
+      extends: ["plugin:@typescript-eslint/all", "prettier/@typescript-eslint"],
+
+      rules: {
+        "@typescript-eslint/member-ordering": "off",
+        "@typescript-eslint/no-magic-numbers": "off",
+        "@typescript-eslint/no-unnecessary-condition": [
+          "error",
+          { allowConstantLoopConditions: true },
+        ],
+        "@typescript-eslint/prefer-readonly-parameter-types": "off",
+        "@typescript-eslint/restrict-template-expressions": "off",
+        "@typescript-eslint/typedef": "off",
+      },
+    },
+
+    {
+      files: ["demo/**/*.ts"],
+
+      env: {
+        browser: true,
+      },
+    },
+
+    {
+      files: ["test/**/*.ts"],
+
+      env: {
+        browser: true,
+        jasmine: true,
+      },
     },
   ],
 };
