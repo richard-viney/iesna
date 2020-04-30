@@ -9,7 +9,7 @@ module.exports = function (config) {
     files: [
       { pattern: "./test/*.ts" },
       { pattern: "./src/*.ts" },
-      { pattern: "./ies-documents/*.ts" },
+      { pattern: "./ies-lights/*.ts" },
     ],
 
     preprocessors: {

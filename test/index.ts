@@ -1,10 +1,10 @@
-import IesDocuments from "../ies-documents";
+import IesLights from "../ies-lights";
 import * as IESNA from "../src";
 
 describe("IESNA", () => {
   it("parses all test documents", () => {
-    for (const document of IesDocuments) {
-      IESNA.parse(document.data);
+    for (const light of IesLights) {
+      IESNA.parse(light.data);
     }
   });
 
@@ -13,8 +13,8 @@ describe("IESNA", () => {
     canvas.width = 100;
     canvas.height = 100;
 
-    for (const document of IesDocuments) {
-      const iesData = IESNA.parse(document.data);
+    for (const light of IesLights) {
+      const iesData = IESNA.parse(light.data);
       IESNA.renderToCanvas({ iesData, canvas });
     }
   });

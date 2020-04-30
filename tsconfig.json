@@ -1,5 +1,5 @@
 {
-  "include": ["demo", "ies-documents", "test", "src"],
+  "include": ["demo", "ies-lights", "test", "src"],
 
   "compilerOptions": {
     "target": "ES2015",

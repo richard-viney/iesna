@@ -1,27 +1,27 @@
-import IesDocuments from "../ies-documents";
+import IesLights from "../ies-lights";
 import * as IESNA from "../src";
 
 class DemoApp {
   public run(): void {
-    this.loadIESDocuments();
+    this.loadLights();
     this.addEventListeners();
 
-    this.iesDocumentTextArea.value = IesDocuments[0].data;
+    this.iesLightTextArea.value = IesLights[0].data;
     this.updateCanvas();
   }
 
-  private loadIESDocuments(): void {
-    for (const iesDocument of IesDocuments) {
+  private loadLights(): void {
+    for (const light of IesLights) {
       const option = document.createElement("option");
-      option.innerHTML = iesDocument.name;
-      option.value = IesDocuments.indexOf(iesDocument).toString();
-      this.iesDocumentDropdown.appendChild(option);
+      option.innerHTML = light.name;
+      option.value = IesLights.indexOf(light).toString();
+      this.iesLightDropdown.appendChild(option);
     }
   }
 
   private addEventListeners(): void {
     const inputElements = [
-      this.iesDocumentTextArea,
+      this.iesLightTextArea,
       this.distanceSlider,
       this.zoomSlider,
       this.brightnessSlider,
@@ -31,15 +31,15 @@ class DemoApp {
       element.oninput = (): void => this.updateCanvas();
     }
 
-    // Refresh everything when a new document is chosen
-    this.iesDocumentDropdown.onchange = (): void => {
-      this.iesDocumentTextArea.value = IesDocuments[this.iesDocumentDropdown.selectedIndex].data;
+    // Refresh everything when a new light is chosen
+    this.iesLightDropdown.onchange = (): void => {
+      this.iesLightTextArea.value = IesLights[this.iesLightDropdown.selectedIndex].data;
       this.updateCanvas();
     };
   }
 
   private updateCanvas(): void {
-    const iesData = IESNA.parse(this.iesDocumentTextArea.value);
+    const iesData = IESNA.parse(this.iesLightTextArea.value);
     const brightness = Number(this.brightnessSlider.value);
 
     IESNA.renderToCanvas({
@@ -56,11 +56,11 @@ class DemoApp {
   }
 
   private readonly canvas = document.getElementsByTagName("canvas")[0];
-  private readonly iesDocumentDropdown = document.getElementById("document") as HTMLSelectElement;
+  private readonly iesLightDropdown = document.getElementById("light") as HTMLSelectElement;
   private readonly distanceSlider = document.getElementById("distance") as HTMLInputElement;
   private readonly zoomSlider = document.getElementById("zoom") as HTMLInputElement;
   private readonly brightnessSlider = document.getElementById("brightness") as HTMLInputElement;
-  private readonly iesDocumentTextArea = document.getElementsByTagName("textarea")[0];
+  private readonly iesLightTextArea = document.getElementsByTagName("textarea")[0];
 }
 
 document.addEventListener("DOMContentLoaded", () => new DemoApp().run());
