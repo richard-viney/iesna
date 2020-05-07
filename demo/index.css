@@ -5,9 +5,6 @@ html {
 }
 
 body {
-  background: #111;
-  color: #ddd;
-
   position: absolute;
   top: 0;
   right: 0;
@@ -47,7 +44,6 @@ h1 {
   width: 300px;
   height: 300px;
   justify-self: center;
-  border: 1px solid #ddd;
   grid-area: canvas;
   margin-bottom: 20px;
 }
@@ -59,11 +55,8 @@ h1 {
 
 .controls select {
   align-self: center;
-  color: #111;
 }
 
 textarea {
   grid-area: document;
-  background: transparent;
-  color: #ddd;
 }
