@@ -5,8 +5,8 @@ IESNA91
 [MANUFAC] Halo,Recessed
 [LUMCAT] H7t-301
 [LUMINAIRE] Open Trim (75W R-30 Flood)
-[LAMP] 
-[REPORT] 
+[LAMP]
+[REPORT]
 TILT=NONE
 1 900.0 1.0 36 1 1 1 0.0 -0.32 0.0
 1.0 1.0 75.0

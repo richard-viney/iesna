@@ -21,8 +21,8 @@ import * as IESNA from "@lightspeedgraphics/iesna";
 
 IESNA.renderToCanvas({
   iesData: IESNA.parse("IES document goes here"),
-  canvas: document.getElementsByTagName("canvas")[0]
-})
+  canvas: document.getElementsByTagName("canvas")[0],
+});
 ```
 
 In addition to the `IESNA.renderToCanvas()` method, custom light sampling can be done using the

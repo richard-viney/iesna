@@ -7,6 +7,6 @@
     "outFile": "index.js",
     "isolatedModules": false,
     "lib": ["dom"],
-    "module": "AMD",
+    "module": "AMD"
   }
 }
