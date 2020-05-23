@@ -1,3 +1,5 @@
+/* eslint-env node */
+
 module.exports = {
   root: true,
 
@@ -33,6 +35,7 @@ module.exports = {
       extends: ["plugin:@typescript-eslint/all", "prettier/@typescript-eslint"],
 
       rules: {
+        "@typescript-eslint/lines-between-class-members": "off",
         "@typescript-eslint/member-ordering": "off",
         "@typescript-eslint/no-magic-numbers": "off",
         "@typescript-eslint/no-unnecessary-condition": [

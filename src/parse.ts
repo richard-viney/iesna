@@ -190,10 +190,11 @@ function standardizeHorizontalAngles0(data: IesData): void {
     360,
   ];
 
-  const array = data.photometricData.candela[0];
-  if (array === undefined) {
+  if (data.photometricData.candela.length === 0) {
     throw Error("iesna: incomplete candela data");
   }
+
+  const array = data.photometricData.candela[0];
 
   for (let i = 1; i < data.photometricData.horizontalAngles.length; i++) {
     data.photometricData.candela.push(array);

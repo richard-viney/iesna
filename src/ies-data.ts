@@ -4,7 +4,7 @@
 export interface IesData {
   version: string; // IES version string
 
-  headers: {}; // IES headers
+  headers: Record<string, string>; // IES headers
 
   tilt: string; // IES tilt string
 
