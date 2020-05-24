@@ -50,6 +50,6 @@ This library was written by Lightspeed Graphics Ltd. All contributions welcome.
 [npm-link]: https://www.npmjs.com/package/@lightspeedgraphics/iesna
 [npm-badge]: https://badge.fury.io/js/%40lightspeedgraphics%2Fiesna.svg
 [ci-link]: https://github.com/lightspeedgraphics/iesna/actions
-[ci-badge]: https://github.com/lightspeedgraphics/iesna/workflows/ci/badge.svg
+[ci-badge]: https://github.com/lightspeedgraphics/iesna/workflows/CI/badge.svg
 [semantic-release-badge]: https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg
 [semantic-release-link]: https://github.com/semantic-release/semantic-release
