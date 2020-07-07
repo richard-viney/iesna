@@ -22,11 +22,11 @@ jobs:
       - name: Run tests
         run: npm run test
 
-  # Publish the package to NPM if needed (master branch only)
+  # Publish the package to NPM if needed (main branch only)
   publish:
     runs-on: ubuntu-18.04
     needs: test
-    if: github.ref == 'refs/heads/master'
+    if: github.ref == 'refs/heads/main'
     steps:
       - name: Setup Node.js
         uses: actions/setup-node@v1
@@ -39,6 +39,6 @@ jobs:
       - name: Setup NPM credentials
         run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NODE_AUTH_TOKEN }}" > ~/.npmrc
       - name: Publish semantic release
-        run: npx semantic-release
+        run: npx semantic-release --branches main
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
