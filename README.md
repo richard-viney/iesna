@@ -25,9 +25,9 @@ IESNA.renderToCanvas({
 });
 ```
 
-In addition to the `IESNA.renderToCanvas()` method, custom light sampling can be done using the
-`IESNA.sample()` function. This function accepts an IES data object and x,y,z coordinate in light
-space. and returns the light intensity at that position.
+In addition to the `IESNA.renderToCanvas()` method, light sampling can be done using the
+`IESNA.sample()` function. This function takes an IES data object and an x,y,z coordinate in light
+space and returns the light intensity at that position.
 
 ```typescript
 const iesData = IESNA.parse("IES document goes here");
