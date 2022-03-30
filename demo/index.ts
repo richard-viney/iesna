@@ -28,7 +28,9 @@ class DemoApp {
     ];
 
     for (const element of inputElements) {
-      element.oninput = (): void => this.updateCanvas();
+      element.oninput = (): void => {
+        this.updateCanvas();
+      };
     }
 
     // Refresh everything when a new light is chosen
@@ -63,4 +65,6 @@ class DemoApp {
   private readonly iesLightTextArea = document.getElementsByTagName("textarea")[0];
 }
 
-document.addEventListener("DOMContentLoaded", () => new DemoApp().run());
+document.addEventListener("DOMContentLoaded", () => {
+  new DemoApp().run();
+});

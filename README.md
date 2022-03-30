@@ -37,7 +37,7 @@ const intensity = IESNA.sample({ iesData, x, y, z });
 ## Demo
 
 There is a demo app that shows the rendering of IES documents in the browser. Run it with
-`npm install && npm run dev` then go to `http://localhost:5000`.
+`npm install && npm run dev` then go to `http://127.0.0.1:5000`.
 
 ## License
 

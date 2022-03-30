@@ -1,4 +1,4 @@
-import { IesData } from "./ies-data";
+import type { IesData } from "./ies-data";
 
 function linearInterpolate(a: number, b: number, t: number): number {
   return a + (b - a) * t;
@@ -74,7 +74,7 @@ export function sample({
       iesData.photometricData.verticalAngles[verticalIndex]);
 
   // Sample candela value, with bilinear interpolation
-  const sample = linearInterpolate(
+  const rawSample = linearInterpolate(
     linearInterpolate(a, b, horizontalFraction),
     linearInterpolate(c, d, horizontalFraction),
     verticalFraction
@@ -84,7 +84,7 @@ export function sample({
   const attenuation = 1.0 / (distance * distance);
 
   return (
-    sample *
+    rawSample *
     iesData.lamp.multiplier *
     iesData.electricalData.ballastFactor *
     iesData.electricalData.ballastLampPhotometricFactor *

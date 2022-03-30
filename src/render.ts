@@ -1,4 +1,4 @@
-import { IesData } from "./ies-data";
+import type { IesData } from "./ies-data";
 import { sample } from "./sample";
 
 /**
@@ -10,13 +10,13 @@ export function renderToCanvas({
   canvas,
   distance = 1,
   zoom = 1,
-  convertSampleToRGB = (sample: number): [number, number, number] => [sample, sample, sample],
+  convertSampleToRGB = (value: number): [number, number, number] => [value, value, value],
 }: {
   iesData: IesData;
   canvas: HTMLCanvasElement;
   distance?: number;
   zoom?: number;
-  convertSampleToRGB?: (sample: number) => [number, number, number];
+  convertSampleToRGB?: (value: number) => [number, number, number];
 }): void {
   const context = canvas.getContext("2d");
   if (context === null) {

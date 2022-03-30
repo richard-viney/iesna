@@ -1,4 +1,4 @@
-import { IesData } from "./ies-data";
+import type { IesData } from "./ies-data";
 
 function removeLeadingBlankLines(lines: string[]): void {
   while (lines.length > 0 && lines[0].trim() === "") {
@@ -16,8 +16,8 @@ function readDocumentVersion(lines: string[]): string {
   return version;
 }
 
-function readDocumentHeaders(lines: string[]): { [name: string]: string } {
-  const headers: { [key: string]: string } = {};
+function readDocumentHeaders(lines: string[]): Record<string, string> {
+  const headers: Record<string, string> = {};
 
   while (lines.length > 0) {
     const result = /^\[(.*)\](.*)$/g.exec(lines[0]);
@@ -78,7 +78,7 @@ function readDocumentCandelaValues(lines: string[]): number[] {
 
 interface IesDocument {
   version: string;
-  headers: { [name: string]: string };
+  headers: Record<string, string>;
   tilt: string;
   values: number[];
 }
@@ -171,23 +171,7 @@ function parseIesData(document: IesDocument): IesData {
 // Standardizes IES data that has no horizontal sweep by repeating samples.
 function standardizeHorizontalAngles0(data: IesData): void {
   data.photometricData.horizontalAngles = [
-    0,
-    22.5,
-    45,
-    67.5,
-    90,
-    112.5,
-    135,
-    157.5,
-    180,
-    202.5,
-    225,
-    247.5,
-    270,
-    292.5,
-    315,
-    337.5,
-    360,
+    0, 22.5, 45, 67.5, 90, 112.5, 135, 157.5, 180, 202.5, 225, 247.5, 270, 292.5, 315, 337.5, 360,
   ];
 
   if (data.photometricData.candela.length === 0) {

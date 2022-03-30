@@ -1,26 +1,19 @@
 {
-  "include": ["demo", "ies-lights", "test", "src"],
+  "include": ["**/*.ts"],
 
   "compilerOptions": {
-    "target": "ES2015",
-
     "baseUrl": ".",
-    "esModuleInterop": true,
-    "module": "CommonJS",
-    "moduleResolution": "Node",
 
-    "alwaysStrict": true,
+    "target": "ES6",
+    "module": "ES6",
+    "moduleResolution": "node",
+
+    "strict": true,
     "forceConsistentCasingInFileNames": true,
     "noEmitOnError": true,
     "noFallthroughCasesInSwitch": true,
-    "noImplicitAny": true,
     "noImplicitReturns": true,
-    "noImplicitThis": true,
     "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "strictBindCallApply": true,
-    "strictFunctionTypes": true,
-    "strictNullChecks": true,
-    "strictPropertyInitialization": true
+    "noUnusedParameters": true
   }
 }

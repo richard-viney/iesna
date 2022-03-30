@@ -1,4 +1,4 @@
-name: CI
+name: Test and Publish
 
 on:
   - push
@@ -7,38 +7,49 @@ on:
 jobs:
   # Run the test suite and linters
   test:
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-20.04
     steps:
       - name: Setup Node.js
         uses: actions/setup-node@v1
         with:
-          node-version: 12
+          node-version: 16
+
       - name: Checkout repository
         uses: actions/checkout@v2
+
       - name: Install packages
         run: npm install
+
       - name: Run linters
         run: npm run lint
+
       - name: Run tests
         run: npm run test
 
-  # Publish the package to NPM if needed (main branch only)
+  # Publish the package to NPM (main branch only)
   publish:
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-20.04
     needs: test
+    environment: Publish to NPM
     if: github.ref == 'refs/heads/main'
+
     steps:
       - name: Setup Node.js
         uses: actions/setup-node@v1
         with:
-          node-version: 12
+          node-version: 16
+
       - name: Checkout repository
         uses: actions/checkout@v2
+
       - name: Install packages
         run: npm install
-      - name: Setup NPM credentials
-        run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NODE_AUTH_TOKEN }}" > ~/.npmrc
-      - name: Publish semantic release
-        run: npx semantic-release --branches main
+
+      - name: Semantic release
+        uses: cycjimmy/semantic-release-action@v3
+        with:
+          branches: main
+          semantic_version: 19.0.2
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
