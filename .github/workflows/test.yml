@@ -16,7 +16,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 18
+          node-version: 22
 
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -31,4 +31,6 @@ jobs:
         run: npm run lint
 
       - name: Run tests
-        run: npm run test
+        run: |
+          npm add @rollup/rollup-linux-x64-gnu@4.34.0
+          npm run test

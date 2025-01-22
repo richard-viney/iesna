@@ -32,7 +32,9 @@ jobs:
           check-regexp: Test
 
       - name: Build demo app
-        run: npx vite build
+        run: |
+          npm add @rollup/rollup-linux-x64-gnu@4.34.0
+          npx vite build
 
       - name: Deploy demo app to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
@@ -41,8 +43,6 @@ jobs:
 
       - name: Semantic release
         uses: cycjimmy/semantic-release-action@v4
-        with:
-          dry_run: true
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
