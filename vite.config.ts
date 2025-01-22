@@ -2,7 +2,7 @@ import { defineConfig } from "vite";
 
 export default defineConfig({
   root: "demo",
-  base: "iesna",
+  base: "/iesna",
 
   test: {
     root: "test",
