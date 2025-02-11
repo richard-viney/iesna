@@ -1,0 +1,64 @@
+<!doctype html>
+<html>
+  <head>
+    <script
+      src="https://kit.fontawesome.com/4e8968f74f.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <script type="module" crossorigin src="/iesna/assets/index-DkwyF6kg.js"></script>
+    <link rel="stylesheet" crossorigin href="/iesna/assets/index-DNvKbqt9.css">
+  </head>
+
+  <body>
+    <header>
+      <img src="data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2036%2036'%3e%3cpath%20fill='%23FFD983'%20d='M29%2011.06c0%206.439-5%207.439-5%2013.44%200%203.098-3.123%203.359-5.5%203.359-2.053%200-6.586-.779-6.586-3.361C11.914%2018.5%207%2017.5%207%2011.06%207%205.029%2012.285.14%2018.083.14%2023.883.14%2029%205.029%2029%2011.06z'/%3e%3cpath%20fill='%23CCD6DD'%20d='M22.167%2032.5c0%20.828-2.234%202.5-4.167%202.5-1.933%200-4.167-1.672-4.167-2.5%200-.828%202.233-.5%204.167-.5%201.933%200%204.167-.328%204.167.5z'/%3e%3cpath%20fill='%23FFCC4D'%20d='M22.707%2010.293c-.391-.391-1.023-.391-1.414%200L18%2013.586l-3.293-3.293c-.391-.391-1.023-.391-1.414%200s-.391%201.023%200%201.414L17%2015.414V26c0%20.553.448%201%201%201s1-.447%201-1V15.414l3.707-3.707c.391-.391.391-1.023%200-1.414z'/%3e%3cpath%20fill='%2399AAB5'%20d='M24%2031c0%201.104-.896%202-2%202h-8c-1.104%200-2-.896-2-2v-6h12v6z'/%3e%3cpath%20fill='%23CCD6DD'%20d='M11.999%2032c-.48%200-.904-.347-.985-.836-.091-.544.277-1.06.822-1.15l12-2c.544-.098%201.06.277%201.15.822.091.544-.277%201.06-.822%201.15l-12%202c-.055.01-.111.014-.165.014zm0-4c-.48%200-.904-.347-.985-.836-.091-.544.277-1.06.822-1.15l12-2c.544-.097%201.06.277%201.15.822.091.544-.277%201.06-.822%201.15l-12%202c-.055.01-.111.014-.165.014z'/%3e%3c/svg%3e" height="48px" />
+      <h1>IESNA Demo</h1>
+      <a
+        href="https://github.com/richard-viney/iesna"
+        target="_blank"
+        style="margin-left: auto"
+      >
+        <i class="fa-github fa-brands fa-2x"></i>
+      </a>
+    </header>
+
+    <div class="canvas-container">
+      <canvas></canvas>
+    </div>
+
+    <div class="controls">
+      <label>IES Document</label>
+      <select id="light"></select>
+      <label>Distance</label>
+      <input
+        id="distance"
+        type="range"
+        min="0.001"
+        max="100"
+        value="0"
+        step="0.001"
+      />
+      <label>Zoom</label>
+      <input
+        id="zoom"
+        type="range"
+        min="0.001"
+        max="5"
+        value="1.2"
+        step="0.001"
+      />
+      <label>Brightness</label>
+      <input
+        id="brightness"
+        type="range"
+        min="0.001"
+        max="5"
+        value="1.2"
+        step="0.001"
+      />
+    </div>
+
+    <textarea></textarea>
+  </body>
+</html>
