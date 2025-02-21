@@ -33,7 +33,7 @@ jobs:
 
       - name: Build demo app
         run: |
-          npm add @rollup/rollup-linux-x64-gnu@4.34.0
+          npm add --dev @rollup/rollup-linux-x64-gnu@4.34.0
           npx vite build
 
       - name: Deploy demo app to GitHub Pages
