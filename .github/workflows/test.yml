@@ -32,5 +32,5 @@ jobs:
 
       - name: Run tests
         run: |
-          npm add @rollup/rollup-linux-x64-gnu@4.34.0
+          npm add --save-dev @rollup/rollup-linux-x64-gnu@4.37.0
           npm run test
