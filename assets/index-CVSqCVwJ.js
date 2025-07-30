@@ -1,4 +1,4 @@
-var m=Object.defineProperty;var O=(t,e,A)=>e in t?m(t,e,{enumerable:!0,configurable:!0,writable:!0,value:A}):t[e]=A;var s=(t,e,A)=>O(t,typeof e!="symbol"?e+"":e,A);(function(){const e=document.createElement("link").relList;if(e&&e.supports&&e.supports("modulepreload"))return;for(const o of document.querySelectorAll('link[rel="modulepreload"]'))a(o);new MutationObserver(o=>{for(const n of o)if(n.type==="childList")for(const I of n.addedNodes)I.tagName==="LINK"&&I.rel==="modulepreload"&&a(I)}).observe(document,{childList:!0,subtree:!0});function A(o){const n={};return o.integrity&&(n.integrity=o.integrity),o.referrerPolicy&&(n.referrerPolicy=o.referrerPolicy),o.crossOrigin==="use-credentials"?n.credentials="include":o.crossOrigin==="anonymous"?n.credentials="omit":n.credentials="same-origin",n}function a(o){if(o.ep)return;o.ep=!0;const n=A(o);fetch(o.href,n)}})();const U={name:"Bollard",data:`
+(function(){const e=document.createElement("link").relList;if(e&&e.supports&&e.supports("modulepreload"))return;for(const o of document.querySelectorAll('link[rel="modulepreload"]'))a(o);new MutationObserver(o=>{for(const n of o)if(n.type==="childList")for(const I of n.addedNodes)I.tagName==="LINK"&&I.rel==="modulepreload"&&a(I)}).observe(document,{childList:!0,subtree:!0});function A(o){const n={};return o.integrity&&(n.integrity=o.integrity),o.referrerPolicy&&(n.referrerPolicy=o.referrerPolicy),o.crossOrigin==="use-credentials"?n.credentials="include":o.crossOrigin==="anonymous"?n.credentials="omit":n.credentials="same-origin",n}function a(o){if(o.ep)return;o.ep=!0;const n=A(o);fetch(o.href,n)}})();const d={name:"Bollard",data:`
 IESNA:LM-63-2002
 [TEST]BALLABS TEST NO.  14397.0
 [TESTLAB] BUILDING ACOUSTICS & LIGHTING LABORATORIES, INC
@@ -15,7 +15,7 @@ TILT=NONE
 0 5 10 15 20 25 30 35 40 45 50 55 60 62.5 65 67.5 70 72.5 75 77.5 80 82.5 85 87.5 90 95 105 115 125 135 145 155 165 175 180
 0
 0.00 12.00 87.00 182.00 167.00 300.00 655.00 944.00 822.00 703.00 614.00 565.00 487.00 438.00 372.00 309.00 262.00 216.00 182.00 142.00 111.00 83.00 61.00 42.00 25.00 19.00 14.00 14.00 15.00 20.00 33.00 36.00 27.00 4.00 0.00
-`},u={name:"Cylinder narrow",data:`
+`},O={name:"Cylinder narrow",data:`
 IESNA:LM-63-1995
 [TEST]BALLABS TEST NO.  10974.0
 [MANUFAC] INFINITY LIGHTING INC - CARTHAGE, MISSOURI
@@ -32,7 +32,7 @@ TILT=NONE
      .0
   8183.  6729.  4775.  3866.  2714.  1600.   992.   715.   373.   119.
     46.    20.     8.     4.     0.     0.     0.     0.     0.
-`},D={name:"Cylinder wide",data:`
+`},m={name:"Cylinder wide",data:`
 IESNA:LM-63-1995
 [TEST]BALLABS TEST NO.  10979.0
 [MANUFAC] INFINITY LIGHTING INC - CARTHAGE, MISSOURI
@@ -49,7 +49,7 @@ TILT=NONE
      .0
   4612.  5322.  6414.  6917.  6708.  5675.  4019.  2703.  1870.   872.
    169.    42.     9.     0.     0.     0.     0.     0.     0.
-`},p={name:"Defined",data:`
+`},U={name:"Defined",data:`
 IESNA91
 [TEST]     Test unknown
 [MANUFAC]  Manufacturing company unknown
@@ -66,7 +66,7 @@ TILT=NONE
 8379.00 8409.00 8528.00 8126.65 8500.00 8564.00 8301.00 8158.61 8411.98 8036.59 7865.61 7283.76 5209.38 6038.93 4533.49 3091.00
 3665.38 2996.97 3625.45 2194.62 3170.85 1115.28 651.00 450.00 244.00 102.00 80.00 43.00 5.00 2.00 0.00 0.00 0.00 0.00 0.00 0.00
 0.00
-`},g={name:"Defined spot",data:`
+`},u={name:"Defined spot",data:`
 IESNA:LM-63-1995
 [TEST] 100068_0 BY: ERCO / LUM650
 [DATE]02.12.2004
@@ -81,7 +81,7 @@ TILT=NONE
 0
 7399.9 7219.5 6097.7 3707.0 836.0 281.6 239.8 145.2 90.2 46.2 33.0 17.6 12.1
 11.0 9.9 9.0 0.0 0.0 0.0
-`},P={name:"Jellyfish",data:`
+`},D={name:"Jellyfish",data:`
 IESNA:LM-63-1995
 [TEST]BALLABS TEST NO.  12788.0
 [MANUFAC] INFINITY LIGHTING INC - CARTHAGE, MISSOURI
@@ -162,7 +162,7 @@ TILT=NONE
   1789.  1742.  1698.  1623.  1491.  1354.  1196.  1040.   894.   722.
    565.   421.   302.   227.   159.   108.    57.    20.    14.    10.
      8.     6.     6.     5.     0.
-`},f={name:"Medium scatter",data:`
+`},p={name:"Medium scatter",data:`
 IESNA:LM-63-2002
 [TEST] 5890_0
 [TESTLAB] ERCO GmbH
@@ -548,7 +548,7 @@ TILT=NONE
 24.40911		23.42396		22.333835		21.112895		19.76437		18.377085		17.01887		15.518535		14.00851		
 12.462955		10.87541		9.310475		7.705165		6.06917		4.54784		3.131485		0		0		
 0		
-`},H={name:"Overhead",data:`
+`},g={name:"Overhead",data:`
 IESNA:LM-63-1995
 [TEST]BALLABS TEST NO.  14061.0
 [MANUFAC] H.E. WILLIAMS, INC - CARTHAGE, MISSOURI
@@ -573,7 +573,7 @@ TILT=NONE
   4833.  4192.  3919.  3577.  2826.  1898.  1078.   300.     0.
  19229. 19182. 18980. 17451. 14652. 12139.  9613.  8042.  6513.  5624.
   4861.  4328.  4096.  3686.  2812.  1884.  1065.   259.     0.
-`},B={name:"Parallel beam",data:`
+`},f={name:"Parallel beam",data:`
 IESNA:LM-63-2002
 [TEST] 3907_1
 [TESTLAB] ERCO GmbH
@@ -609,7 +609,7 @@ TILT=NONE
 11501.82		10746.12		9057.18		7549.74		6203.736		3923.898		1914.198		784.278		360.2148		
 177.9558		99.2772		57.8556		27.5748		8.976		0		0		0		0		
 0		
-`},G={name:"Pear",data:`
+`},P={name:"Pear",data:`
 IESNA:LM-63-1995
 [TEST]BALLABS TEST NO.  10495.0
 [MANUFAC] H.E. WILLIAMS, INC - CARTHAGE, MISSOURI
@@ -634,7 +634,7 @@ TILT=NONE
   1183.   818.   577.   428.   333.   261.   179.    69.     0.
   3962.  3920.  3792.  3613.  3430.  3266.  3056.  2776.  2335.  1816.
   1338.   927.   640.   453.   342.   271.   182.    68.     0.
-`},F={name:"Round",data:`
+`},H={name:"Round",data:`
 IESNA:LM-63-1995
 [TEST]BALLABS TEST NO.  11781.0
 [MANUFAC] INFINITY LIGHTING INC - CARTHAGE, MISSOURI
@@ -671,7 +671,7 @@ TILT=NONE
   3771.  3466.  3041.  2443.  1714.  1177.   793.   493.   285.   168.
     96.    71.    83.    85.    58.    20.     0.     0.     0.     0.
      0.     0.     0.     0.     0.     0.     0.
-`},v={name:"Scatter light",data:`
+`},B={name:"Scatter light",data:`
 IESNA:LM-63-2002
 [TEST]BALLABS TEST NO.  14353.0
 [TESTLAB] BUILDING ACOUSTICS & LIGHTING LABORATORIES, INC
@@ -708,7 +708,7 @@ TILT=NONE
 2698.00 4110.00 3488.00 2406.00 2227.00 2084.00 2068.00 2015.00 1882.00 1212.00 589.00 195.00 283.00 276.00 162.00 109.00 105.00 90.00 82.00 50.00 35.00 19.00 5.00 0.00 0.00
 2698.00 4024.00 3228.00 2390.00 2172.00 2042.00 2014.00 1959.00 1846.00 1134.00 463.00 188.00 265.00 235.00 153.00 108.00 110.00 90.00 76.00 53.00 38.00 23.00 8.00 0.00 0.00
 2698.00 3931.00 3193.00 2575.00 2140.00 2066.00 1998.00 1956.00 1841.00 1186.00 544.00 205.00 274.00 230.00 167.00 112.00 115.00 93.00 76.00 56.00 41.00 25.00 9.00 0.00 0.00
-`},W={name:"Soft arrow",data:`
+`},G={name:"Soft arrow",data:`
 IESNA91
 [MANUFAC] Halo,Recessed
 [LUMCAT] H7t-301
@@ -723,7 +723,7 @@ TILT=NONE
 0.0
 1512.0 1516.0 1508.0 1487.0 1453.0 1409.0 1357.0 1294.0 1229.0 1158.0 1085.0 1008.0 934.0 862.0 795.0 727.0 578.0 459.0 368.0
 304.0 256.0 222.0 197.0 177.0 163.0 153.0 141.0 124.0 73.0 28.0 23.0 18.0 13.0 9.0 4.0 1.0
-`},w={name:"Star focused",data:`
+`},F={name:"Star focused",data:`
 IESNA91
 [TEST] NO. 12296
 [MANUFAC]LITHONIA - ESG MODEL HQM LAMPHEAD
@@ -772,7 +772,7 @@ TILT=NONE
 7,6,6,6,5,5,5,5,4,4
 4,4,3,3,3,2,2,2,1,1
 1,1,1,0,0,0,0
-`},b={name:"Three lobe umbrella",data:`
+`},v={name:"Three lobe umbrella",data:`
 IESNA:LM-63-1995
 [TEST] 100071_0 BY: ERCO / LUM650
 [DATE]02.12.2004
@@ -789,7 +789,7 @@ TILT=NONE
 2400.1 2237.2 1869.5 1201.9 501.0 362.8 273.9 155.5 125.9 108.6 100.0 86.4
 50.6 28.4 18.5 11.1 10.4 4.9 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0
 0.0 0.0 0.0 0.0 0.0 0.0 0.0
-`},z={name:"Three lobe vee",data:`
+`},W={name:"Three lobe vee",data:`
 IESNA:LM-63-1995
 [TEST] 100069_0 BY: ERCO / LUM650
 [DATE]02.12.2004
@@ -803,7 +803,7 @@ TILT=NONE
 0 5 10 15 20 25 30 35 40 45 50 55 60 65 70 75 80 85 90
 0
 68000 34008 6853 3982 936 582 543 514 349 189 92 58 44 34 0 0 0 0 0
-`},x={name:"Tight focused",data:`
+`},w={name:"Tight focused",data:`
 IESNA:LM-63-1995
 [TEST]BALLABS TEST NO.  13700.0
 [MANUFAC] INFINITY LIGHTING INC - CARTHAGE, MISSOURI
@@ -836,7 +836,7 @@ TILT=NONE
    486.   178.    62.    60.     7.     0.     0.     0.     0.
  25790. 23109. 15969.  8525.  3888.  2119.  1337.  1025.   835.   699.
    578.   473.   373.   251.    23.     7.     0.     0.     0.
-`},y={name:"Top post",data:`
+`},b={name:"Top post",data:`
 IESNA:LM-63-2002
 [TEST]BALLABS TEST NO.  14501.0
 [TESTLAB] BUILDING ACOUSTICS & LIGHTING LABORATORIES, INC
@@ -853,7 +853,7 @@ TILT=NONE
 0 5 10 15 20 25 30 35 40 45 50 55 60 62.5 65 67.5 70 72.5 75 77.5 80 82.5 85 87.5 90 95 105 115 125 135 145 155 165 175 180
 0
 67.00 113.00 238.00 460.00 973.00 1277.00 1388.00 1425.00 1408.00 1338.00 1199.00 1018.00 700.00 430.00 320.00 335.00 227.00 209.00 154.00 137.00 125.00 109.00 91.00 65.00 46.00 38.00 25.00 18.00 10.00 5.00 3.00 3.00 0.00 0.00 0.00
-`},Y={name:"Trapezoid",data:`
+`},z={name:"Trapezoid",data:`
 IESNA:LM-63-2002
 [TEST]BALLABS TEST NO.  14477.0
 [TESTLAB] BUILDING ACOUSTICS & LIGHTING LABORATORIES, INC
@@ -890,7 +890,7 @@ TILT=NONE
 9079.00 10234.00 9794.00 6873.00 5913.00 5641.00 5273.00 4016.00 2120.00 1120.00 736.00 552.00 384.00 280.00 184.00 112.00 80.00 48.00 40.00 24.00 8.00 0.00 0.00 0.00 0.00
 9079.00 10242.00 9794.00 6825.00 5985.00 5777.00 5313.00 4000.00 2104.00 1160.00 840.00 640.00 456.00 320.00 232.00 152.00 104.00 56.00 48.00 24.00 16.00 0.00 0.00 0.00 0.00
 9079.00 10298.00 9666.00 6905.00 6097.00 5849.00 5401.00 4152.00 2128.00 1248.00 904.00 720.00 488.00 352.00 248.00 168.00 120.00 64.00 48.00 32.00 24.00 8.00 0.00 0.00 0.00
-`},V={name:"Umbrella",data:`
+`},x={name:"Umbrella",data:`
 IESNA:LM-63-1995
 [TEST]BALLABS TEST NO.  12447.0
 [MANUFAC] INFINITY LIGHTING INC - CARTHAGE, MISSOURI
@@ -915,7 +915,7 @@ TILT=NONE
    711.   388.   120.    30.    11.     6.     4.     1.     0.
   5122.  5113.  5032.  4843.  4615.  4130.  3464.  2374.  1519.  1017.
    589.   293.    73.    27.    11.     6.     3.     1.     0.
-`},Q={name:"X arrow",data:`
+`},y={name:"X arrow",data:`
 IESNA:LM-63-1995
 [TEST] BE1680
 [DATE] 12-FEB-96
@@ -929,7 +929,7 @@ TILT=NONE
  0  2.5  5  7.5  10  12.5  15  17.5  20  22.5  25  27.5  30  32.5  35  37.5  40  42.5  45  47.5  50  52.5  55  57.5  60  62.5  65  67.5  70  72.5  75  77.5  80  82.5  85  87.5  90  92.5  95  97.5  100  102.5  105  107.5  110  112.5  115  117.5  120  122.5  125  127.5  130  132.5  135  137.5  140  142.5  145  147.5  150  152.5  155  157.5  160  162.5  165  167.5  170  172.5  175  177.5  180
  0
  167.3  168.9  173  179.9  179.2  151.2  119.4  95.63  81.03  71.95  66.46  62.67  60.25  57.67  52.18  46.62  48.91  63.15  83.15  95.41  97.4  87.75  62.6  43.08  39.26  47.36  52.89  45.74  31.45  18.17  10.5  7.888  8.112  7.592  3.665  .6467  .498  .4252  .3735  .3185  .2765  .2279  .2199  .2021  .1746  .1407  .1358  .1277  .1326  .1342  .1406  .1374  .1358  .1375  .1488  .1488  .1536  .1925  .2183  .2328  .2345  .249  .2765  .3023  .3266  .3476  .3557  .3638  .3541  .3573  .3638  .3719  .3816
-`},K={name:"X arrow diffuse",data:`
+`},Y={name:"X arrow diffuse",data:`
 IESNA:LM-63-1995
 [TEST] BE1396
 [DATE] 22-SEPT-96
@@ -943,7 +943,7 @@ TILT=NONE
  0  2.5  5  7.5  10  12.5  15  17.5  20  22.5  25  27.5  30  32.5  35  37.5  40  42.5  45  47.5  50  52.5  55  57.5  60  62.5  65  67.5  70  72.5  75  77.5  80  82.5  85  87.5  90
  0
  283.4  280.7  270  250.8  228  207.8  185.8  160.1  140.4  133  131.4  131.4  130.9  127.9  120.7  109.3  99.46  95.13  98.4  106.8  116  122.2  124.1  119.1  97.99  57.94  26.92  11.71  4.582  1.544  .9573  .6497  .4341  .2616  .1724  .04603  .005727
-`},_={name:"X arrow soft",data:`
+`},V={name:"X arrow soft",data:`
 IESNA:LM-63-1995
 [TEST] BE1667
 [DATE] 12-FEB-96
@@ -957,6 +957,6 @@ TILT=NONE
  0  2.5  5  7.5  10  12.5  15  17.5  20  22.5  25  27.5  30  32.5  35  37.5  40  42.5  45  47.5  50  52.5  55  57.5  60  62.5  65  67.5  70  72.5  75  77.5  80  82.5  85  87.5  90  92.5  95  97.5  100  102.5  105  107.5  110  112.5  115  117.5  120  122.5  125  127.5  130  132.5  135  137.5  140  142.5  145  147.5  150  152.5  155  157.5  160  162.5  165  167.5  170  172.5  175  177.5  180
  0
  178.4  176.7  170.8  160.9  147  133  114.6  96.13  80.57  67.13  56.54  47.61  40.87  36.97  36.86  39.76  45.47  54.35  66.39  75.84  79.96  73.53  62.87  52.35  44.33  39.14  36.31  33.87  29.1  22.59  15.67  9.13  5.317  2.654  1.382  .3416  .2  .09695  .2025  .175  .1518  .1455  .1328  .1307  .1139  .1097  .097  .1075  .1076  .07175  .1243  .1073  .1328  .1349  .1391  .1307  .1412  .1475  .156  .1813  .1876  .2087  .2466  .2466  .2782  .2993  .3035  .3035  .3035  .2993  .2993  .3035  .3035
-`},S=[U,u,D,g,p,P,f,H,B,G,F,v,W,w,b,z,x,y,Y,V,K,_,Q];function X(t){for(;t.length>0&&t[0].trim()==="";)t.shift()}function Z(t){var A;const e=(A=t.shift())==null?void 0:A.trim();if(e===void 0)throw Error("iesna: failed reading document version");return e}function $(t){const e={};for(;t.length>0;){const A=/^\[(.*)\](.*)$/g.exec(t[0]);if(A===null)break;t.shift();const a=A[1].trim(),o=A[2].trim();e[a]=o}return e}function j(t){const e=/TILT\s*=\s*(.*)/.exec(t[0]);if(e===null)throw Error("iesna: missing TILT value");return t.shift(),e[1].trim()}function k(t){const e=[];for(;;){const A=t.shift();if(A===void 0)break;const a=A.replace(/(\t|,)/g," ").split(" ").map(o=>o.trim()).filter(o=>o.length>0);for(const o of a){const n=Number(o);if(isNaN(n))throw Error(`iesna: non-numeric candela value "${o}"`);e.push(n)}}return e}function q(t){const e=t.replace(/\r\n/g,`
+`},c=[d,O,m,u,U,D,p,g,f,P,H,B,G,F,v,W,w,b,z,x,Y,V,y];function Q(t){for(;t.length>0&&t[0].trim()==="";)t.shift()}function K(t){const e=t.shift()?.trim();if(e===void 0)throw Error("iesna: failed reading document version");return e}function _(t){const e={};let A;for(;t.length>0;){const a=/^\[(.*)\](.*)$/g.exec(t[0]);if(a===null)break;t.shift();const o=a[1].trim(),n=a[2].trim();if(o==="MORE"){if(A===void 0)throw Error("iesna: MORE header appeared without a previous value");A.push(n);continue}A=[],o in e?e[o].push({value:n,more:A}):e[o]=[{value:n,more:A}]}return e}function X(t){const e=/TILT\s*=\s*(.*)/.exec(t[0]);if(e===null)throw Error("iesna: missing TILT value");return t.shift(),e[1].trim()}function Z(t){const e=[];for(;;){const A=t.shift();if(A===void 0)break;const a=A.replace(/(\t|,)/g," ").split(" ").map(o=>o.trim()).filter(o=>o.length>0);for(const o of a){const n=Number(o);if(isNaN(n))throw Error(`iesna: non-numeric candela value "${o}"`);e.push(n)}}return e}function $(t){const e=t.replace(/\r\n/g,`
 `).split(`
-`);X(e);const A=Z(e),a=$(e),o=j(e),n=k(e);return{version:A,headers:a,tilt:o,values:n}}function J(t){function e(){const E=t.values.shift();if(E===void 0)throw Error("iesna: parsing document found too few values");return E}const A={lampCount:e(),lumensPerLamp:e(),multiplier:e()},a=e(),o=e(),n={goniometerType:e(),verticalAngles:[],horizontalAngles:[],candela:[]},I=e(),r={width:e(),length:e(),height:e()},L={ballastFactor:e(),ballastLampPhotometricFactor:e(),inputWatts:e()},T={version:t.version,headers:t.headers,tilt:t.tilt,lamp:A,photometricData:n,units:I,dim:r,electricalData:L};for(let E=0;E<a;E++)T.photometricData.verticalAngles.push(e());for(let E=0;E<o;E++)T.photometricData.horizontalAngles.push(e());for(let E=0;E<o;E++){T.photometricData.candela.push([]);for(let N=0;N<a;N++)T.photometricData.candela[E].push(e())}return T}function t0(t){if(t.photometricData.horizontalAngles=[0,22.5,45,67.5,90,112.5,135,157.5,180,202.5,225,247.5,270,292.5,315,337.5,360],t.photometricData.candela.length===0)throw Error("iesna: incomplete candela data");const e=t.photometricData.candela[0];for(let A=1;A<t.photometricData.horizontalAngles.length;A++)t.photometricData.candela.push(e)}function e0(t){t.photometricData.horizontalAngles=[...t.photometricData.horizontalAngles,...t.photometricData.horizontalAngles.map(e=>e+90),...t.photometricData.horizontalAngles.map(e=>e+180),...t.photometricData.horizontalAngles.map(e=>e+270)],t.photometricData.candela=[...t.photometricData.candela,...t.photometricData.candela.reverse(),...t.photometricData.candela,...t.photometricData.candela.reverse()]}function A0(t){t.photometricData.horizontalAngles=[...t.photometricData.horizontalAngles,...t.photometricData.horizontalAngles.map(e=>e+180)],t.photometricData.candela.push(...t.photometricData.candela.reverse())}function o0(t){const e=t.photometricData.horizontalAngles[t.photometricData.horizontalAngles.length-1];if(e===0)t0(t);else if(e===90)e0(t);else if(e===180)A0(t);else if(e!==360)throw Error(`iesna: final horizontal angle is ${e}, expect 0/90/180/360`)}function n0(t){const e=q(t),A=J(e);return o0(A),A}function R(t,e,A){return t+(e-t)*A}function h(t){return t*180/Math.PI}function a0({iesData:t,x:e,y:A,z:a}){const o=Math.sqrt(e*e+A*A+a*a),n=h(Math.atan2(a,e))+180,I=h(Math.acos(A/o));let r;for(let i=0;i<t.photometricData.horizontalAngles.length-1;i++)if(n>=t.photometricData.horizontalAngles[i]&&n<t.photometricData.horizontalAngles[i+1]){r=i;break}let L;for(let i=0;i<t.photometricData.verticalAngles.length-1;i++)if(I>=t.photometricData.verticalAngles[i]&&I<t.photometricData.verticalAngles[i+1]){L=i;break}if(r===void 0||L===void 0)return 0;const T=t.photometricData.candela[r][L],E=t.photometricData.candela[r+1][L],N=t.photometricData.candela[r][L+1],M=t.photometricData.candela[r+1][L+1],l=(n-t.photometricData.horizontalAngles[r])/(t.photometricData.horizontalAngles[r+1]-t.photometricData.horizontalAngles[r]),C=(I-t.photometricData.verticalAngles[L])/(t.photometricData.verticalAngles[L+1]-t.photometricData.verticalAngles[L]),c=R(R(T,E,l),R(N,M,l),C),d=1/(o*o);return c*t.lamp.multiplier*t.electricalData.ballastFactor*t.electricalData.ballastLampPhotometricFactor*d}function E0({iesData:t,canvas:e,distance:A=1,zoom:a=1,convertSampleToRGB:o=n=>[n,n,n]}){const n=e.getContext("2d");if(n===null)throw Error("iesna: renderToCanvas() failed getting context for canvas");const I=e.width,r=e.height,L=n.getImageData(0,0,I,r);for(let T=0;T<r;T++)for(let E=0;E<I;E++){const N=a0({iesData:t,x:(E-I/2-.5)/a,y:(T-r/2-.5)/a,z:A}),[M,l,C]=o(N),c=(T*I+E)*4;L.data[c]=Math.min(M*255,255),L.data[c+1]=Math.min(l*255,255),L.data[c+2]=Math.min(C*255,255),L.data[c+3]=255}n.putImageData(L,0,0)}class L0{constructor(){s(this,"canvas",document.getElementsByTagName("canvas")[0]);s(this,"iesLightDropdown",document.getElementById("light"));s(this,"distanceSlider",document.getElementById("distance"));s(this,"zoomSlider",document.getElementById("zoom"));s(this,"brightnessSlider",document.getElementById("brightness"));s(this,"iesLightTextArea",document.getElementsByTagName("textarea")[0])}run(){this.loadLights(),this.addEventListeners(),this.iesLightTextArea.value=S[0].data,this.updateCanvas()}loadLights(){for(const e of S){const A=document.createElement("option");A.innerHTML=e.name,A.value=S.indexOf(e).toString(),this.iesLightDropdown.appendChild(A)}}addEventListeners(){const e=[this.iesLightTextArea,this.distanceSlider,this.zoomSlider,this.brightnessSlider];for(const A of e)A.oninput=()=>this.updateCanvas();this.iesLightDropdown.onchange=()=>{this.iesLightTextArea.value=S[this.iesLightDropdown.selectedIndex].data,this.updateCanvas()}}updateCanvas(){const e=n0(this.iesLightTextArea.value),A=Number(this.brightnessSlider.value);E0({iesData:e,canvas:this.canvas,distance:Number(this.distanceSlider.value),zoom:Number(this.zoomSlider.value),convertSampleToRGB:a=>[a*A,a*.89*A,a*.77*A]})}}document.addEventListener("DOMContentLoaded",()=>new L0().run());
+`);Q(e);const A=K(e),a=_(e),o=X(e),n=Z(e);return{version:A,headers:a,tilt:o,values:n}}function j(t){function e(){const E=t.values.shift();if(E===void 0)throw Error("iesna: parsing document found too few values");return E}const A={lampCount:e(),lumensPerLamp:e(),multiplier:e()},a=e(),o=e(),n={goniometerType:e(),verticalAngles:[],horizontalAngles:[],candela:[]},I=e(),L={width:e(),length:e(),height:e()},r={ballastFactor:e(),ballastLampPhotometricFactor:e(),inputWatts:e()},T={version:t.version,headers:t.headers,tilt:t.tilt,lamp:A,photometricData:n,units:I,dim:L,electricalData:r};for(let E=0;E<a;E++)T.photometricData.verticalAngles.push(e());for(let E=0;E<o;E++)T.photometricData.horizontalAngles.push(e());for(let E=0;E<o;E++){T.photometricData.candela.push([]);for(let s=0;s<a;s++)T.photometricData.candela[E].push(e())}return T}function k(t){if(t.photometricData.horizontalAngles=[0,22.5,45,67.5,90,112.5,135,157.5,180,202.5,225,247.5,270,292.5,315,337.5,360],t.photometricData.candela.length===0)throw Error("iesna: incomplete candela data");const e=t.photometricData.candela[0];for(let A=1;A<t.photometricData.horizontalAngles.length;A++)t.photometricData.candela.push(e)}function q(t){t.photometricData.horizontalAngles=[...t.photometricData.horizontalAngles,...t.photometricData.horizontalAngles.map(e=>e+90),...t.photometricData.horizontalAngles.map(e=>e+180),...t.photometricData.horizontalAngles.map(e=>e+270)],t.photometricData.candela=[...t.photometricData.candela,...t.photometricData.candela.reverse(),...t.photometricData.candela,...t.photometricData.candela.reverse()]}function J(t){t.photometricData.horizontalAngles=[...t.photometricData.horizontalAngles,...t.photometricData.horizontalAngles.map(e=>e+180)],t.photometricData.candela.push(...t.photometricData.candela.reverse())}function t0(t){const e=t.photometricData.horizontalAngles[t.photometricData.horizontalAngles.length-1];if(e===0)k(t);else if(e===90)q(t);else if(e===180)J(t);else if(e!==360)throw Error(`iesna: final horizontal angle is ${e}, expect 0/90/180/360`)}function e0(t){const e=$(t),A=j(e);return t0(A),A}function C(t,e,A){return t+(e-t)*A}function R(t){return t*180/Math.PI}function A0({iesData:t,x:e,y:A,z:a}){const o=Math.sqrt(e*e+A*A+a*a),n=R(Math.atan2(a,e))+180,I=R(Math.acos(A/o));let L;for(let i=0;i<t.photometricData.horizontalAngles.length-1;i++)if(n>=t.photometricData.horizontalAngles[i]&&n<t.photometricData.horizontalAngles[i+1]){L=i;break}let r;for(let i=0;i<t.photometricData.verticalAngles.length-1;i++)if(I>=t.photometricData.verticalAngles[i]&&I<t.photometricData.verticalAngles[i+1]){r=i;break}if(L===void 0||r===void 0)return 0;const T=t.photometricData.candela[L][r],E=t.photometricData.candela[L+1][r],s=t.photometricData.candela[L][r+1],M=t.photometricData.candela[L+1][r+1],l=(n-t.photometricData.horizontalAngles[L])/(t.photometricData.horizontalAngles[L+1]-t.photometricData.horizontalAngles[L]),S=(I-t.photometricData.verticalAngles[r])/(t.photometricData.verticalAngles[r+1]-t.photometricData.verticalAngles[r]),N=C(C(T,E,l),C(s,M,l),S),h=1/(o*o);return N*t.lamp.multiplier*t.electricalData.ballastFactor*t.electricalData.ballastLampPhotometricFactor*h}function o0({iesData:t,canvas:e,distance:A=1,zoom:a=1,convertSampleToRGB:o=n=>[n,n,n]}){const n=e.getContext("2d");if(n===null)throw Error("iesna: renderToCanvas() failed getting context for canvas");const I=e.width,L=e.height,r=n.getImageData(0,0,I,L);for(let T=0;T<L;T++)for(let E=0;E<I;E++){const s=A0({iesData:t,x:(E-I/2-.5)/a,y:(T-L/2-.5)/a,z:A}),[M,l,S]=o(s),N=(T*I+E)*4;r.data[N]=Math.min(M*255,255),r.data[N+1]=Math.min(l*255,255),r.data[N+2]=Math.min(S*255,255),r.data[N+3]=255}n.putImageData(r,0,0)}class n0{run(){this.loadLights(),this.addEventListeners(),this.iesLightTextArea.value=c[0].data,this.updateCanvas()}loadLights(){for(const e of c){const A=document.createElement("option");A.innerHTML=e.name,A.value=c.indexOf(e).toString(),this.iesLightDropdown.appendChild(A)}}addEventListeners(){const e=[this.iesLightTextArea,this.distanceSlider,this.zoomSlider,this.brightnessSlider];for(const A of e)A.oninput=()=>this.updateCanvas();this.iesLightDropdown.onchange=()=>{this.iesLightTextArea.value=c[this.iesLightDropdown.selectedIndex].data,this.updateCanvas()}}updateCanvas(){const e=e0(this.iesLightTextArea.value),A=Number(this.brightnessSlider.value);o0({iesData:e,canvas:this.canvas,distance:Number(this.distanceSlider.value),zoom:Number(this.zoomSlider.value),convertSampleToRGB:a=>[a*A,a*.89*A,a*.77*A]})}canvas=document.getElementsByTagName("canvas")[0];iesLightDropdown=document.getElementById("light");distanceSlider=document.getElementById("distance");zoomSlider=document.getElementById("zoom");brightnessSlider=document.getElementById("brightness");iesLightTextArea=document.getElementsByTagName("textarea")[0]}document.addEventListener("DOMContentLoaded",()=>new n0().run());
