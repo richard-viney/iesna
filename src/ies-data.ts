@@ -4,7 +4,7 @@
 export interface IesData {
   version: string; // IES version string
 
-  headers: Record<string, string>; // IES headers
+  headers: IesHeaders; // IES headers
 
   tilt: string; // IES tilt string
 
@@ -36,3 +36,9 @@ export interface IesData {
     candela: number[][]; // Candela values
   };
 }
+
+/**
+ * Describes the headers in an IES document. Each header can be multi-valued and
+ * each value can optionally have associated 'MORE' information as well.
+ */
+export type IesHeaders = Record<string, { value: string; more: string[] }[]>;

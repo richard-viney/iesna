@@ -1,4 +1,4 @@
-import type { IesData } from "./ies-data";
+import type { IesData, IesHeaders } from "./ies-data";
 
 function removeLeadingBlankLines(lines: string[]): void {
   while (lines.length > 0 && lines[0].trim() === "") {
@@ -16,8 +16,10 @@ function readDocumentVersion(lines: string[]): string {
   return version;
 }
 
-function readDocumentHeaders(lines: string[]): Record<string, string> {
-  const headers: Record<string, string> = {};
+function readDocumentHeaders(lines: string[]): IesHeaders {
+  const headers: IesHeaders = {};
+
+  let more: string[] | undefined = undefined;
 
   while (lines.length > 0) {
     const result = /^\[(.*)\](.*)$/g.exec(lines[0]);
@@ -30,7 +32,24 @@ function readDocumentHeaders(lines: string[]): Record<string, string> {
     const header = result[1].trim();
     const value = result[2].trim();
 
-    headers[header] = value;
+    // The 'MORE' header adds information to the previous value
+    if (header === "MORE") {
+      if (more === undefined) {
+        throw Error("iesna: MORE header appeared without a previous value");
+      }
+
+      more.push(value);
+
+      continue;
+    }
+
+    more = [];
+
+    if (!(header in headers)) {
+      headers[header] = [{ value, more }];
+    } else {
+      headers[header].push({ value, more });
+    }
   }
 
   return headers;
@@ -78,7 +97,7 @@ function readDocumentCandelaValues(lines: string[]): number[] {
 
 interface IesDocument {
   version: string;
-  headers: Record<string, string>;
+  headers: IesHeaders;
   tilt: string;
   values: number[];
 }

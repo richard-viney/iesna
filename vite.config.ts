@@ -1,11 +1,11 @@
-import { defineConfig } from "vite";
+import { defineConfig } from "vitest/config";
 
 export default defineConfig({
   root: "demo",
   base: "/iesna",
 
   test: {
-    root: "test",
+    root: ".",
     environment: "jsdom",
   },
 });
