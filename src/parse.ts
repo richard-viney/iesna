@@ -217,9 +217,9 @@ function standardizeHorizontalAngles90(data: IesData): void {
 
   data.photometricData.candela = [
     ...data.photometricData.candela,
-    ...data.photometricData.candela.reverse(),
+    ...[...data.photometricData.candela].reverse(),
     ...data.photometricData.candela,
-    ...data.photometricData.candela.reverse(),
+    ...[...data.photometricData.candela].reverse(),
   ];
 }
 
@@ -231,7 +231,9 @@ function standardizeHorizontalAngles180(data: IesData): void {
     ...data.photometricData.horizontalAngles.map((angle) => angle + 180),
   ];
 
-  data.photometricData.candela.push(...data.photometricData.candela.reverse());
+  data.photometricData.candela.push(
+    ...[...data.photometricData.candela].reverse(),
+  );
 }
 
 // Some IES documents contain incomplete horizontal angles. This includes
@@ -252,7 +254,7 @@ function standardizeHorizontalAngles(data: IesData): void {
     standardizeHorizontalAngles180(data);
   } else if (lastHorizontalAngle !== 360) {
     throw Error(
-      `iesna: final horizontal angle is ${lastHorizontalAngle}, expect 0/90/180/360`,
+      `iesna: final horizontal angle is ${lastHorizontalAngle}, expected 0/90/180/360`,
     );
   }
 }
